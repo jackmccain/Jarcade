@@ -1,0 +1,90 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+body {
+    background-color: bisque;
+}
+
+#game {
+    width: 650px;
+    height: 300px;
+    border: 3px solid black;
+    position: relative;
+    left: 400px;
+    top: 180px;
+    background-image: url(background.gif);
+    background-position-y: 721rem;
+    background-size: 600px;
+}
+
+#character {
+    position: relative;
+    top: 235px;
+}
+
+#block {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 190px;
+    left: 1000px;
+    animation: block 1s infinite linear;
+}
+
+#score {
+    border: 3px solid black;
+    color: white;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    left: 940px;
+    top: -125px;
+    padding: 0.3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+#btn {
+    color: white;
+    position: relative;
+    width: 100px;
+    left: 680px;
+    top: -55px;
+    border: 8px solid black;
+    border-radius: 5rem;
+}
+
+@keyframes block {
+    0% {
+        left: 570px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+
+.animate {
+    animation: jump 500ms;
+}
+
+@keyframes jump {
+    0% {
+        top: 235px;
+    }
+    30% {
+        top: 185px;
+    }
+    70% {
+        top: 185px;
+    }
+    100% {
+        top: 235px;
+    }
+}

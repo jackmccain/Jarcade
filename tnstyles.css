@@ -1,0 +1,119 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+body {
+    background-color: bisque;
+}
+
+#game {
+    width: 450px;
+    height: 650px;
+    border: 3px solid black;
+    position: relative;
+    left: 500px;
+    top: 50px;
+    background-image: url(bg.png)
+}
+
+#character {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    top: -200px;
+    left: 80px;
+    background-image: url("wall.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#branchright {
+    position: absolute;
+    left: 78px;
+    top: 0px;
+    animation: branchright 1250ms infinite linear;
+}
+
+#branchleft {
+    position: absolute;
+    left: 257px;
+    top: 0px;
+    animation: branchleft 1250ms infinite linear;
+}
+
+.treeright {
+    position: absolute;
+    left: 375px;
+}
+
+@keyframes jumpleft {
+    0% {
+        image: url(wall.png);
+        left: 80px;
+    }
+    10% {
+        background-image: url(launch.png);
+    }
+    70% {
+        background-image: url(pre.png);
+    }
+    100% {
+        background-image: url(wall\ 2.png);
+        left: 330px;
+    }
+}
+
+.animate {
+    animation: jumpleft 500ms;
+}
+
+.animate2 {
+    animation: jumpright 500ms;
+}
+
+@keyframes jumpright {
+    0% {
+        image: url(wall\ 2.png);
+        left: 330px;
+    }
+    10% {
+        background-image: url(launch\ 2.png);
+    }
+    70% {
+        background-image: url(pre\ 2.png);
+    }
+    100% {
+        background-image: url(wall.png);
+        left: 80px;
+    }
+}
+
+.branchanimate {
+    animation: branch 1250ms;
+}
+
+@keyframes branch {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 600px;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
