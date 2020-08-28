@@ -14,8 +14,6 @@ function jump() {
     if (document.getElementById("character").classList.contains("hidden")) {} else {
         jumps++;
         document.getElementById("score").innerHTML = jumps;
-        var audio = new Audio('ding.mp3');
-        audio.play();
     }
 
     if (character.classList != "animate") {

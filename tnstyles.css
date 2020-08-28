@@ -4,59 +4,81 @@
 }
 
 body {
-    background-color: bisque;
+    background-image: url("https://www.publicdomainpictures.net/pictures/300000/velka/pixelated-background-1554863525mz3.jpg");
 }
+
+    #btn {
+        color: white;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        left: 175px;
+        top: -450px;
+        border: 5 solid black;
+        border-radius: 5rem;
+    }
+
 
 #game {
     width: 450px;
     height: 650px;
-    border: 3px solid black;
+    border: 5px solid black;
     position: relative;
     left: 500px;
     top: 50px;
     background-image: url(bg.png)
 }
-.score{
-    max-width: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    font-size: 24px;}
-
 #character {
     position: relative;
     width: 70px;
     height: 70px;
     top: -200px;
-    left: 80px;
+    left: 77px;
     background-image: url("wall.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+.score {
+    width: 460px;
+    background-color: black;
+    height: 2rem;
+    font: small;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: 500px;
+    top: 1rem;
+    color: white;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
 #branchright {
     position: absolute;
     left: 78px;
-    top: 200px;
-    animation: branchright 1250ms infinite linear;
+    top: -10px;
 }
 
 #branchleft {
     position: absolute;
     left: 257px;
-    top: 500px;
-    animation: branchleft 1250ms infinite linear;
+    top: -10px;
 }
 
 .treeright {
     position: absolute;
-    left: 375px;
+    left: 370px;
 }
+
+/* .treeleft {
+    position: absolute;
+    left: 0px;
+} */
 
 @keyframes jumpleft {
     0% {
         image: url(wall.png);
-        left: 80px;
+        left: 77px;
     }
     10% {
         background-image: url(launch.png);
@@ -91,11 +113,11 @@ body {
     }
     100% {
         background-image: url(wall.png);
-        left: 80px;
+        left: 77px;
     }
 }
 .branchanimate {
-    animation: branch 1250ms;
+    animation: branch 1000ms linear;
 }
 
 @keyframes branch {
@@ -103,10 +125,13 @@ body {
         top: 0px;
     }
     100% {
-        top: 600px;
+        top: 615px;
     }
 }
 
+.hidden {
+    display: none;
+}
 
 
 
